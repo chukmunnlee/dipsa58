@@ -12,13 +12,13 @@ jobs:
       # steps in this job
       steps:
       - name: echo the date
-        run: echo "hello, Github Action $(date)"
+        run: echo "hello, Github Action $(date), this is my secret: ${{ secrets.MY_API_KEY }}"
 
       - name: List before checkout 
         run: ls -l
 
       - name: checkout source code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
         with:
             ref: ${{ github.base_ref }}
 

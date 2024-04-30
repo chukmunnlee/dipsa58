@@ -1,0 +1,9 @@
+name: "Acme"
+address:
+  street: 1 bedrock ave
+  postcode: abcd1234
+products:
+- books
+- car:
+  - mazda
+  - toyota

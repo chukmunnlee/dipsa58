@@ -1,0 +1,13 @@
+{
+   "name": "Acme",
+   "address": {
+      "street": "1 bedrock ave",
+      "postcode": "abcd123"
+   },
+   "products": [
+      "books", 
+      { 
+         "car": [ "mazda", "toyota" ]
+      }
+   ]
+}

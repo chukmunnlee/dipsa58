@@ -12,7 +12,7 @@ jobs:
       # steps in this job
       steps:
       - name: echo the date
-        run: echo "hello, Github Action $(date), this is my secret: ${{ secrets.MY_API_KEY }}"
+        run: echo "hello, Github Action $(date), this is my secret: ${{ secrets.MY_API_KEY }}
 
       - name: List before checkout 
         run: ls -l
@@ -28,5 +28,5 @@ jobs:
       - name: echo the git branch
         uses: mscoutermarsh/cowsays-action@master
         with:
-         text: I am on branch ${{ github.base_ref }}
+         text: ${{ secrets.MY_API_KEY }}
          color: green

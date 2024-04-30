@@ -14,6 +14,9 @@ jobs:
       - name: echo the date
         run: echo "hello, Github Action $(date)"
 
+      - name: List before checkout 
+        run: ls -l
+
       - name: checkout source code
         uses: actions/checkout@v4
         with:

@@ -14,8 +14,16 @@ jobs:
       - name: echo the date
         run: echo "hello, Github Action $(date)"
 
+      - name: checkout source code
+        uses: actions/checkout@v4
+        with:
+            ref: ${{ github.base_ref }}
+
+      - name: List directory
+        run: ls -l
+
       - name: echo the git branch
         uses: mscoutermarsh/cowsays-action@master
         with:
-         text: "I am on branch ${{ github.base_ref }}"
+         text: I am on branch ${{ github.base_ref }}
          color: green
